@@ -123,4 +123,4 @@ Uygulama başladıktan sonra kendisi default tanımlı browser neyse onda açıl
 
 ![İlk başlatma.](https://github.com/olgunyldz/react-boilerplate/blob/initial/docs/first-start.PNG)
 
-![İlk Görünüm.](https://github.com/olgunyldz/react-boilerplate/blob/initial/docs/first-screen.png)
+![İlk Görünüm.](https://github.com/olgunyldz/react-boilerplate/blob/initial/docs/first-screen.PNG)
