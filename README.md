@@ -14,7 +14,7 @@ React'ın performans olarak data değiştiğinde bileşen bazlı olarak render o
 
 React'ta, ata bileşenden alt bileşenlere doğru bir data akışı vardır ve alt bileşenden ata bileşene doğru event ile durum değişiklikleri iletilir(**_Single way data flow_**).
 
-![setup.](docs/data-flow.png)
+![setup.](https://github.com/olgunyldz/react-boilerplate/blob/initial/docs/data-flow.PNG)
 
 Figure 2.1
 
@@ -32,7 +32,7 @@ node.js bizim için javascript uygulamalarını browser dışında çalıştırm
 
 npm de kullanacağımız javascript paketlerini node kullanarak download etmemizi sağlayan araçtır.
 
-![setup.](./docs/node.png)
+![setup.](https://github.com/olgunyldz/react-boilerplate/blob/initial/docs/node.png)
 
 Figure 2.1
 
@@ -65,7 +65,7 @@ cd react-boilerplate
 
 Kurulum gerçekleştikten sonra folder yapısı aşağıda ki gibi olur.
 
-![İlk görünüm.](./docs/first-create.png)
+![İlk görünüm.](https://github.com/olgunyldz/react-boilerplate/blob/initial/docs/first-create.png)
 
 ```json
 ...
@@ -121,6 +121,6 @@ npm start
 
 Uygulama başladıktan sonra kendisi default tanımlı browser neyse onda açılacak.
 
-![İlk başlatma.](./docs/first-start.png)
+![İlk başlatma.](https://github.com/olgunyldz/react-boilerplate/blob/initial/docs/first-start.png)
 
-![İlk Görünüm.](./docs/first-screen.png)
+![İlk Görünüm.](https://github.com/olgunyldz/react-boilerplate/blob/initial/docs/docs/first-screen.png)
