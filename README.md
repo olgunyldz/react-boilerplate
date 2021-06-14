@@ -14,7 +14,7 @@ React'ın performans olarak data değiştiğinde bileşen bazlı olarak render o
 
 React, ata bileşenden alt bileşenlere doğru bir data akışı vardır ve alt bileşenden ata bileşene doğru event ile durum değişiklikleri iletilir(**_Single way data flow_**).
 
-![setup.](./docs/data-flow.png)
+![setup.](docs/data-flow.png)
 
 Figure 2.1
 
