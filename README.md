@@ -1,10 +1,10 @@
 # React'a başlıyorum
 
-Merhaba medium için yazdığım ilk makalemde benim de yeni başladığım React ile önyüz uygulaması geliştirmekten bahsedeceğim. React seçerken neler dikkatimi çekti, neyi ne için öğrenmem gerekti aktarmaya çalıştım.
+Merhaba, yazdığım ilk yazımda React ile önyüz uygulaması geliştirmekten bahsedeceğim. React seçerken neler dikkatimi çekti, neyi ne için öğrenmem gerekti aktarmaya çalıştım.
 
 ## React nedir?
 
-React, Facebook tarafından geliştirilen açık kaynaklı bir önyüz geliştirme kütüphanesidir. Önyüz için bileşenler oluşturmamızı sağlar. HTML, CSS ve Javascript bilgisi kısa sürede önyüz bileşenleri geliştirmemizi sağlar.
+React, Facebook tarafından geliştirilen açık kaynaklı bir önyüz geliştirme kütüphanesidir. Önyüz için bileşenler oluşturmamızı sağlar. HTML, CSS ve Javascript bilgisi kısa sürede React ile önyüz bileşenleri ve uygulama geliştirmemizi sağlar.
 
 ## Neden React?
 
@@ -12,7 +12,7 @@ React, Facebook tarafından geliştirilen açık kaynaklı bir önyüz geliştir
 
 React'ın performans olarak data değiştiğinde bileşen bazlı olarak render olmasından kaynaklı hızı da bir tercih sebebi.
 
-React, ata bileşenden alt bileşenlere doğru bir data akışı vardır ve alt bileşenden ata bileşene doğru event ile durum değişiklikleri iletilir(**_Single way data flow_**).
+React'ta, ata bileşenden alt bileşenlere doğru bir data akışı vardır ve alt bileşenden ata bileşene doğru event ile durum değişiklikleri iletilir(**_Single way data flow_**).
 
 ![setup.](docs/data-flow.png)
 
@@ -28,7 +28,7 @@ Ufak bir bilgilenmeden sonra artık aksiyona geçmemiz gerekiyor. React'ın bizi
 
 node.js ve npm React uygulamamızı çalıştırmak ve build almak için kullanacağımız komut satırı araçları.
 
-node.js bizim için javascript uygulamalarını (React'ta bir javascript uygulaması) browser dışında çalıştırmamızı sağlar. [NodeJS](http://nodejs.org) üzerinden kurulumu yapabilirsiniz.
+node.js bizim için javascript uygulamalarını browser dışında çalıştırmamızı sağlar. [NodeJS](http://nodejs.org) üzerinden kurulumu yapabilirsiniz.
 
 npm de kullanacağımız javascript paketlerini node kullanarak download etmemizi sağlayan araçtır.
 
@@ -36,7 +36,7 @@ npm de kullanacağımız javascript paketlerini node kullanarak download etmemiz
 
 Figure 2.1
 
-Kurulumu gerçekleştirdikten sonra aşağıda ki komut ile kontrol edebilirsiniz.
+Kurulumu gerçekleştirdikten sonra aşağıda ki komut ile kontrol edebilirsiniz. ***Kurulumlardan sonra ortam değişkenlerine path tanımları yapmayı unutmayın.***
 
 ```
 node -v
