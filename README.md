@@ -32,7 +32,7 @@ node.js bizim için javascript uygulamalarını browser dışında çalıştırm
 
 npm de kullanacağımız javascript paketlerini node kullanarak download etmemizi sağlayan araçtır.
 
-![setup.](https://github.com/olgunyldz/react-boilerplate/blob/initial/docs/node.png)
+![setup.](https://github.com/olgunyldz/react-boilerplate/blob/initial/docs/node.PNG)
 
 Figure 2.1
 
@@ -121,6 +121,6 @@ npm start
 
 Uygulama başladıktan sonra kendisi default tanımlı browser neyse onda açılacak.
 
-![İlk başlatma.](https://github.com/olgunyldz/react-boilerplate/blob/initial/docs/first-start.png)
+![İlk başlatma.](https://github.com/olgunyldz/react-boilerplate/blob/initial/docs/first-start.PNG)
 
-![İlk Görünüm.](https://github.com/olgunyldz/react-boilerplate/blob/initial/docs/docs/first-screen.png)
+![İlk Görünüm.](https://github.com/olgunyldz/react-boilerplate/blob/initial/docs/first-screen.png)
