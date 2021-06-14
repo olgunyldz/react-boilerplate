@@ -65,7 +65,7 @@ cd react-boilerplate
 
 Kurulum gerçekleştikten sonra folder yapısı aşağıda ki gibi olur.
 
-![İlk görünüm.](https://github.com/olgunyldz/react-boilerplate/blob/initial/docs/first-create.png)
+![İlk görünüm.](https://github.com/olgunyldz/react-boilerplate/blob/initial/docs/first-create.PNG)
 
 ```json
 ...
