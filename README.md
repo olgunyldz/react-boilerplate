@@ -300,3 +300,93 @@ test('should render Todo Component as native', () => {
   expect(element).toHaveTextContent(text);
 });
 ```
+
+Bileşenimiz property olarak aldığı değeri gösteren bir özelliği vardı. Artık biraz daha komplex hale getirmeye başlayalım. Todo componentimiz öncelikle bir todo objesi alsın ve bu obje `id`, `description`, `completed` isimli üç özellik olsun. text özelliğini ekrana yazalım. completed özelliği true ise `<strike>` içinde değilse normal text olarak yazılacak.
+
+Tabi data-testid değerinin gelen todo ya göre güncellenmesi gerekiyor. Benzer şekilde id değerininde. Çünkü bileşenden birden fazla yazılabilecek. Bu durumda tekil değer almak için bu değerlerin benzersiz olması lazım. Bizim için todo objesinde ki id değeri benzersiz olduğu için işimizi görür.
+
+Ayrıca todo bileşenini biraz renklendirmek istedim. Eğer tamamlanmışsa kırmızı(red) tamamlanmamışsa yeşil(green) olacak şekilde h1 elementine style property'si tanımlayabiliyoruz. Ancak burada dikkat edilmesi gereken `{{}}` şeklinde tanımlıyoruz.
+
+```javascript
+function Todo({ todo }) {
+  const { id, description, completed } = todo;
+  const text = completed ? <strike>{description}</strike> : description;
+  const color = completed ? 'red' : 'green';
+  return (
+    <div data-testid={`todo-item-${id}`} id={`todo-id-${id}`}>
+      <h1 style={{ color: color }}> {text}</h1>
+    </div>
+  );
+}
+```
+
+app.js i de günelleyelim ki önyüzde gözükmesini sağlayalım.
+
+```javascript
+function App() {
+  const todos = [
+    {
+      id: 1,
+      description: 'React',
+      completed: true,
+    },
+    {
+      id: 2,
+      description: 'React - Unit Testing',
+      completed: false,
+    },
+    {
+      id: 3,
+      description: 'REact - Multi Language Support',
+      completed: false,
+    },
+  ];
+  return (
+    <div>
+      {todos.map((todo) => (
+        <Todo key={todo.id} todo={todo} />
+      ))}
+    </div>
+  );
+}
+```
+
+Testimiz tabiiki bu durumda hata alacak o yüzden onu da iyileştirmemiz gerekiyor. Öncelikle bileşenimizin iki farklı durumda çalışması mevcut. Birisi completed=true olması diğeri completed=false olması. Bu yüzden 2 test case'imizin olması gerekiyor.
+
+**NOT**: Her test öncesi render edilen bileşenin silinmesi için `afterEach` methoduna `cleanup()` ekliyoruz.
+
+```javascript
+afterEach(() => {
+  cleanup();
+});
+
+test('should render Todo Component color is green if completed is false', () => {
+  const todo = {
+    id: 1,
+    description: 'React Öğren',
+    completed: false,
+  };
+  render(<Todo todo={todo} />);
+  const element = screen.getByTestId('todo-item-1');
+  expect(element).toBeInTheDocument();
+  expect(element).toHaveTextContent(todo.description);
+
+  expect(element.firstChild).toHaveStyle({ color: 'green' });
+});
+
+test('should render Todo Component color is red if completed is true', () => {
+  const todo = {
+    id: 1,
+    description: 'React Öğren',
+    completed: true,
+  };
+  render(<Todo todo={todo} />);
+  const element = screen.getByTestId('todo-item-1');
+  expect(element).toBeInTheDocument();
+  expect(element).toHaveTextContent(todo.description);
+
+  expect(element.firstChild).toHaveStyle({ color: 'red' });
+});
+```
+
+Böylelikle ilk compoenentimiz için testlerimiz yazmış olduk. Projemize de template ile eklenen test framework'ünü kullanmaya başlamış olduk.

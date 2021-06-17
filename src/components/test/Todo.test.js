@@ -1,18 +1,46 @@
 import { screen, render, cleanup } from '@testing-library/react';
 import Todo from '../Todo';
 
-test('should render Todo Component', () => {
-  const text = 'Hello Test World!!!';
-  render(<Todo text={text} />);
-  const element = screen.getByTestId('todo-item');
+afterEach(() => {
+  cleanup();
+});
+
+test('should render Todo Component color is green if completed is false', () => {
+  const todo = {
+    id: 1,
+    description: 'React Öğren',
+    completed: false,
+  };
+  render(<Todo todo={todo} />);
+  const element = screen.getByTestId('todo-item-1');
   expect(element).toBeInTheDocument();
-  expect(element).toHaveTextContent(text);
+  expect(element).toHaveTextContent(todo.description);
+
+  expect(element.firstChild).toHaveStyle({ color: 'green' });
+});
+
+test('should render Todo Component color is red if completed is true', () => {
+  const todo = {
+    id: 1,
+    description: 'React Öğren',
+    completed: true,
+  };
+  render(<Todo todo={todo} />);
+  const element = screen.getByTestId('todo-item-1');
+  expect(element).toBeInTheDocument();
+  expect(element).toHaveTextContent(todo.description);
+
+  expect(element.firstChild).toHaveStyle({ color: 'red' });
 });
 
 test('should render Todo Component as native', () => {
-  const text = 'Hello Test World!!!';
-  render(<Todo text={text} />);
-  const element = document.getElementById('todo-id');
+  const todo = {
+    id: 1,
+    description: 'React Öğren',
+    completed: false,
+  };
+  render(<Todo todo={todo} />);
+  const element = document.getElementById('todo-id-1');
   expect(element).toBeInTheDocument();
-  expect(element).toHaveTextContent(text);
+  expect(element).toHaveTextContent(todo.description);
 });
