@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`snapshot should be same 1`] = `
+<div
+  data-testid="todo-item-1"
+  id="todo-id-1"
+>
+  <h1
+    style={
+      Object {
+        "color": "red",
+      }
+    }
+  >
+     
+    <strike>
+      React Öğren
+    </strike>
+  </h1>
+</div>
+`;
+
+exports[`snapshot should be same if completed false 1`] = `
+<div
+  data-testid="todo-item-2"
+  id="todo-id-2"
+>
+  <h1
+    style={
+      Object {
+        "color": "green",
+      }
+    }
+  >
+     
+    React Öğren - Advanced
+  </h1>
+</div>
+`;
+
+exports[`snapshot should be same if completed true 1`] = `
+<div
+  data-testid="todo-item-1"
+  id="todo-id-1"
+>
+  <h1
+    style={
+      Object {
+        "color": "red",
+      }
+    }
+  >
+     
+    <strike>
+      React Öğren
+    </strike>
+  </h1>
+</div>
+`;

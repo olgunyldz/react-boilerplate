@@ -1,4 +1,5 @@
 import { screen, render, cleanup } from '@testing-library/react';
+import renderer from 'react-test-renderer';
 import Todo from '../Todo';
 
 afterEach(() => {
@@ -31,6 +32,28 @@ test('should render Todo Component color is red if completed is true', () => {
   expect(element).toHaveTextContent(todo.description);
 
   expect(element.firstChild).toHaveStyle({ color: 'red' });
+});
+
+test('snapshot should be same if completed true', () => {
+  const todo = {
+    id: 1,
+    description: 'React Öğren',
+    completed: true,
+  };
+  const todoJSON = renderer.create(<Todo todo={todo} />).toJSON();
+  expect(todoJSON).toMatchSnapshot();
+  console.log(todoJSON);
+});
+
+test('snapshot should be same if completed false', () => {
+  const todo = {
+    id: 2,
+    description: 'React Öğren - Advanced',
+    completed: false,
+  };
+  const todoJSON = renderer.create(<Todo todo={todo} />).toJSON();
+  expect(todoJSON).toMatchSnapshot();
+  console.log(todoJSON);
 });
 
 test('should render Todo Component as native', () => {

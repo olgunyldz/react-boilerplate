@@ -390,3 +390,52 @@ test('should render Todo Component color is red if completed is true', () => {
 ```
 
 Böylelikle ilk compoenentimiz için testlerimiz yazmış olduk. Projemize de template ile eklenen test framework'ünü kullanmaya başlamış olduk.
+
+**BONUS:** Sayfa yapımızın testler sırasında nasıl render edildiğini json olarak tutmak ve bunu değişikliklerde yakalamak istiyorsak `react-test-renderer` paketini kullanabiliriz.
+
+```
+npm i --save-dev react-test-renderer
+```
+
+Testimize renderer paketini eklememiz gerekiyor. Yeni bir test methodu yazarak da json olarak nasıl gözüktüğünü console üzerinden görebiliriz.
+
+```javascript
+import renderer from 'react-test-renderer';
+...
+test('snapshot should be same if completed true', () => {
+  const todo = {
+    id: 1,
+    description: 'React Öğren',
+    completed: true,
+  };
+  const todoJSON = renderer.create(<Todo todo={todo} />).toJSON();
+  expect(todoJSON).toMatchSnapshot();
+  console.log(todoJSON);
+});
+
+test('snapshot should be same if completed false', () => {
+  const todo = {
+    id: 2,
+    description: 'React Öğren - Advanced',
+    completed: false,
+  };
+  const todoJSON = renderer.create(<Todo todo={todo} />).toJSON();
+  expect(todoJSON).toMatchSnapshot();
+  console.log(todoJSON);
+});
+```
+
+```
+ console.log
+    {
+      type: 'div',
+      props: { 'data-testid': 'todo-item-1', id: 'todo-id-1' },
+      children: [ { type: 'h1', props: [Object], children: [Array] } ]
+    }
+
+      at Object.<anonymous> (src/components/test/Todo.test.js:44:11)
+```
+
+![setup.](./docs/test-4.PNG)
+
+Testimiz çalıştıktan sonra console'a yazdırdığımız string'i testin bulundupu dizinde `__snapshots__` dizini altına `Todo.test.js.snap` adıyla kaydeiyor olacak. Eğer dizinde bu dosya mevcutsa aynı kontrolü yapıyor. Eğer yoksa oluşturuyor. Ben çok kullanışlı buldum açıkcası.
