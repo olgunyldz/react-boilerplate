@@ -14,7 +14,7 @@ React'ın performans olarak data değiştiğinde bileşen bazlı olarak render o
 
 React, ata bileşenden alt bileşenlere doğru bir data akışı vardır ve alt bileşenden ata bileşene doğru event ile durum değişiklikleri iletilir(**_Single way data flow_**).
 
-![setup.](./docs/data-flow.png)
+![setup.](./docs/data-flow.PNG)
 
 Figure 2.1
 
@@ -32,7 +32,7 @@ node.js bizim için javascript uygulamalarını (React'ta bir javascript uygulam
 
 npm de kullanacağımız javascript paketlerini node kullanarak download etmemizi sağlayan araçtır.
 
-![setup.](./docs/node.png)
+![setup.](./docs/node.PNG)
 
 Figure 2.1
 
@@ -65,7 +65,7 @@ cd react-boilerplate
 
 Kurulum gerçekleştikten sonra folder yapısı aşağıda ki gibi olur.
 
-![İlk görünüm.](./docs/first-create.png)
+![İlk görünüm.](./docs/first-create.PNG)
 
 ```json
 ...
@@ -121,11 +121,11 @@ Artık ilk uygulama hakkında bilgilerimizi edindiğimize göre bakalım bize te
 npm start
 ```
 
-![İlk başlatma.](./docs/first-start.png)
+![İlk başlatma.](./docs/first-start.PNG)
 
 Bu aşamadan sonra artık uygulamaya bir browser üzerinden bağlanılabilir.(start işlemi sonrasında default tanımlı browser ile uygulama otomatik açılır). Bu template projede react uygulamasını ayağa kaldırmış ve geliştirme yapmaya hazırlamış oluyoruz.
 
-![İlk Görünüm.](./docs/first-screen.png)
+![İlk Görünüm.](./docs/first-screen.PNG)
 
 # Birim Test entegrasyonu yapalım?
 
