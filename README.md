@@ -14,7 +14,7 @@ React'ın performans olarak data değiştiğinde bileşen bazlı olarak render o
 
 React'ta, ata bileşenden alt bileşenlere doğru bir data akışı vardır ve alt bileşenden ata bileşene doğru event ile durum değişiklikleri iletilir(**_Single way data flow_**).
 
-![setup.](https://github.com/olgunyldz/react-boilerplate/blob/initial/docs/data-flow.PNG)
+![setup.](./docs/data-flow.PNG)
 
 Figure 2.1
 
@@ -32,11 +32,11 @@ node.js bizim için javascript uygulamalarını browser dışında çalıştırm
 
 npm de kullanacağımız javascript paketlerini node kullanarak download etmemizi sağlayan araçtır.
 
-![setup.](https://github.com/olgunyldz/react-boilerplate/blob/initial/docs/node.PNG)
+![setup.](./docs/node.PNG)
 
 Figure 2.1
 
-Kurulumu gerçekleştirdikten sonra aşağıda ki komut ile kontrol edebilirsiniz. ***Kurulumlardan sonra ortam değişkenlerine path tanımları yapmayı unutmayın.***
+Kurulumu gerçekleştirdikten sonra aşağıda ki komut ile kontrol edebilirsiniz. **_Kurulumlardan sonra ortam değişkenlerine path tanımları yapmayı unutmayın._**
 
 ```
 node -v
@@ -65,7 +65,7 @@ cd react-boilerplate
 
 Kurulum gerçekleştikten sonra folder yapısı aşağıda ki gibi olur.
 
-![İlk görünüm.](https://github.com/olgunyldz/react-boilerplate/blob/initial/docs/first-create.PNG)
+![İlk görünüm.](./docs/first-create.PNG)
 
 ```json
 ...
@@ -121,6 +121,8 @@ npm start
 
 Uygulama başladıktan sonra kendisi default tanımlı browser neyse onda açılacak.
 
-![İlk başlatma.](https://github.com/olgunyldz/react-boilerplate/blob/initial/docs/first-start.PNG)
+![İlk başlatma.](./docs/first-start.PNG)
 
-![İlk Görünüm.](https://github.com/olgunyldz/react-boilerplate/blob/initial/docs/first-screen.PNG)
+Bu aşamadan sonra artık uygulamaya bir browser üzerinden bağlanılabilir.(uygualama başladıktan sonra ön tanımlı browser ile uygulama otomatik açılır). Bu template projede react uygulamasını ayağa kaldırmış ve geliştirme yapmaya hazırlamış oluyoruz.
+
+![İlk Görünüm.](./docs/first-screen.PNG)
