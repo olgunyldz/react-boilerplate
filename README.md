@@ -16,7 +16,6 @@ React'ta, ata bileşenden alt bileşenlere doğru bir data akışı vardır ve a
 
 ![setup.](./docs/data-flow.PNG)
 
-Figure 2.1
 
 React, data değişikliklerini bileşenlerine yansıtmak için in-memory veri yapısı kullanır(**_Virtual Data Object Model_**). Yapılan değişiklikler böylece sadece datası değişen bileşenlerin güncellenmesini sağlar.
 
@@ -34,7 +33,6 @@ npm de kullanacağımız javascript paketlerini node kullanarak download etmemiz
 
 ![setup.](./docs/node.PNG)
 
-Figure 2.1
 
 Kurulumu gerçekleştirdikten sonra aşağıda ki komut ile kontrol edebilirsiniz. **_Kurulumlardan sonra ortam değişkenlerine path tanımları yapmayı unutmayın._**
 
